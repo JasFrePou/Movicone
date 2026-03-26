@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bekræftelse af bestilling</title>
+    <link rel="stylesheet" href="isogfilmstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e600d75f5.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <img src="logomin.png" alt="">
+         <button id="cart-button" onclick="toggleCart()">
+   <i class="fa-solid fa-basket-shopping"></i></i>(<span id="cart-count">0</span>)
+</button>
+<!-- Popup kurv -->
+<div id="cart-popup" class="hidden">
+  <h3>Din kurv</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="cart-total">0</span> kr</p>
+
+  <button onclick="clearCart()">Tøm kurv</button>
+  <a class="tjekud" href="tjekud.html">Gå til kassen</a>
+</div>
+      </div>
+    </header>
+    <div class="grid">
+<form id="order-form">
+   <h3>Navn:</h3>
+  <input type="text" name="name" placeholder="Navn" required>
+  <h3>E-mail:</h3>
+  <input type="email" name="email" placeholder="Email" required>
+  <h3>Adresse:</h3>
+  <input type="text" name="address" placeholder="Adresse" required>
+
+  <button type="submit">Bekræft ordre</button>
+</form>
+<div id="order-summary"></div>
+</div>
+    <footer> <p>Kontakt os: <br>
++45 33 44 55 66 <br>
+movicone@movicone.dk <br>
+movicone 46, 3th, DK</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("OhucI94L4GKAj0Iso");
+</script>
+<script src="isogfilmscript.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byg din egen pakke</title>
+    <link rel="stylesheet" href="isogfilmstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e600d75f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="logomin.png" alt="">
+      </div>
+  <button id="cart-button" onclick="toggleCart()">
+   <i class="fa-solid fa-basket-shopping"></i></i>(<span id="cart-count">0</span>)
+</button>
+
+<!-- Popup kurv -->
+<div id="cart-popup" class="hidden">
+  <h3>Din kurv</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="cart-total">0</span> kr</p>
+
+  <button onclick="clearCart()">Tøm kurv</button>
+  <a class="tjekud" href="tjekud.html">Gå til kassen</a>
+</div>
+    </header>
+
+<div class="grid">
+      <h2>Design din egen pakke</h2>
+<div class="scrollmenu">
+    <div class="buttons">
+    <button onclick="showMenu('icecream')">Is</button>
+    <button onclick="showMenu('movies')">Film</button>
+  </div>
+
+  <!-- Menu -->
+  <div id="menu">
+    <!-- Is menu -->
+    <div class="menu-content" id="icecream">
+      <div class="scrollcard" onclick="addItem('Vanilje Is', 'vanlije.png', 58)">
+        <img src="vaniljeb.png" alt="">
+        <p>Vanilje Is - 58kr</p>
+      </div>
+      <div class="scrollcard lila" onclick="addItem('Chokolade Is', 'chocolate.png', 58)">
+        <img src="chocolateb.png" alt="">
+        <p>Chokolade Is - 58kr</p>
+      </div>
+      <div class="scrollcard" onclick="addItem('Cookiedough Is', 'cookiedough.png', 58)">
+        <img src="cookiedoughb.png" alt="">
+        <p>Cookiedough Is - 58kr</p>
+      </div>
+      <div class="scrollcard lila" onclick="addItem('Skumfidus Is', 'marshmellow.png', 58)">
+        <img src="vaniljeb.png" alt="">
+        <p>Skumfidus Is - 58kr</p>
+      </div>
+      <div class="scrollcard" onclick="addItem('Mintchip Is', 'mintchip.png', 58)">
+        <img src="mintchipb.png" alt="">
+        <p>Mintchip Is - 58kr</p>
+      </div>
+      <div class="scrollcard lila" onclick="addItem('Pistacie Is', 'pistachio.png', 58)">
+        <img src="pistachiob.png" alt="">
+        <p>Pistacie Is - 58kr</p>
+      </div>
+      <div class="scrollcard" onclick="addItem('Jorbær Is', 'strawberry.png', 58)">
+        <img src="strawberryb.png" alt="">
+        <p>Jordbær Is - 58kr</p>
+      </div>
+      <div class="scrollcard lila" onclick="addItem('Blåbær Is', 'blueberry.png', 58)">
+        <img src="blueberryb.png" alt="">
+        <p>Blåbær Is - 58kr</p>
+      </div>
+      </div>
+      
+    <!-- Film menu -->
+    <div class="menu-content" id="movies" style="display:none;">
+      <div class="scrollcard lila" onclick="addItem('Alice i eventyrland', 'alice.png', 120)">
+        <img src="aliceb.png" alt="">
+        <p>Alice i eventyrland - 120kr</p>
+      </div>
+      <div class="scrollcard" onclick="addItem('Avatar', 'avatar.png', 120)">
+        <img src="avatarb.png" alt="">
+        <p>Avatar - 120kr</p>
+      </div>
+      <div class="scrollcard lila" onclick="addItem('Frost', 'frozen.png', 120)">
+        <img src="frozenb.png" alt="">
+        <p>Frost - 120kr</p>
+      </div>
+      <div class="scrollcard" onclick="addItem('Spiderman', 'spiderman.png', 120)">
+        <img src="spidermanb.png" alt="">
+        <p>Spiderman - 120kr</p>
+      </div>
+      <div class="scrollcard lila" onclick="addItem('Titanic', 'titanic.png', 120)">
+        <img src="titanicb.png" alt="">
+        <p>Titanic - 120kr</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="preview-box">
+
+</div>
+    
+<div class="indkoeb">
+<h2>Indkøbsliste</h2>
+<ul id="shopping-list"></ul>
+<h3>Total: <span id="total-price">0</span> kr</h3>
+
+</div>
+<button class="laegikurv" onclick="addToCart()">Læg i kurv <i class="fa-solid fa-basket-shopping"></i></button>
+</div>
+</div>
+
+<footer> 
+  <p>Kontakt os: <br>
++45 33 44 55 66 <br>
+movicone@movicone.dk <br>
+movicone 46, 3th, DK</p>
+</footer>
+    <script src="isogfilmscript.js"></script>
+</body>
+</html>

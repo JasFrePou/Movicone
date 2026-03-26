@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: hsl(266, 13%, 11%);
+    height: 100px;
+}
+.logo {
+  max-width: 120px;
+  align-content: center;
+  margin: 0 0 0 60px;
+}
+img {
+  width: 100%;
+}
+footer {
+  text-align: center;
+  height: auto;
+  padding: 5px;
+  font-family: 'roboto', sans-serif;
+}
+body {
+  font-family: Arial;
+  background-color: #450E0F;
+  color: #FFF5D2;
+  font-family: "Oleo Script";
+  font-weight: 400;
+  line-height: 200%;
+}
+button {
+  background-color: #EEDAAB;
+  color: #450E0F;
+  font-family: "Oleo Script";
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  padding: 5px;
+}
+/* Kurv knap */
+#cart-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Popup */
+#cart-popup {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background: #FFF5D2;
+  border: 2px solid #EEDAAB;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  color: #450E0F;
+}
+.tjekud {
+  display: block;
+  text-align: center;
+  background-color: #83BFA9;
+  padding: 7px;
+  color: #450E0F;
+  font-family: "Oleo Script";
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+/* Skjul */
+.hidden {
+  display: none;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menu-content {
+  margin-top: 20px;
+}
+
+
+#shopping-list li {
+  cursor: pointer;
+  margin: 5px 0;
+}
+/* Design din egen pakke */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 60px 500px auto;
+  gap: 20px;
+  margin: 60px;
+}
+
+h2 {
+  grid-column: span 8;
+  font-size: 40px;
+}
+.scrollmenu {
+  grid-column: 9/13;
+  grid-row: 1/7;
+  background-color: #83BFA9
+  ;
+  border-radius: 10px;
+  text-align: center;
+  max-height: calc(100vh - 100px); /* tager højde for header + margin */
+  overflow-y: auto;
+}
+
+.scrollmenu .buttons {
+  position: sticky;
+  top: 0;
+  background-color: #83BFA9; /* samme som scrollmenu */
+  z-index: 10;
+  padding: 10px;
+}
+
+#preview-box {
+  
+   position: relative;  
+  height: 500px;
+  overflow: hidden;
+  grid-column: span 8;
+  grid-row: 2/6;
+  height: 500px;
+   border: 5px solid #EEDAAB;
+  display: flex;
+  flex-wrap: wrap;
+  contain: content;
+  background-image: url("table.png");
+  background-size: cover;
+}
+.preview-item {
+  position: absolute;
+  cursor: pointer;
+  width: 400px;
+}
+
+.indkoeb {
+  grid-row: 6;
+  grid-column: 1/6;
+}
+.laegikurv {
+  height: 80px;
+  grid-column: 7/9;
+  grid-row: 6;
+}
+
+.scrollcard {
+  margin: 20px;
+  padding: 15px;
+  background-color: #DF839E;
+  color: #450E0F;
+  font-size: 24px;
+}
+.lila {
+  background-color: #8F80CD;
+}
+.scrollcard img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Bekræftelses side */
+
+#order-form {
+  margin: 60px;
+}
+
+input {
+  grid-column: 1/7;
+  width: 400px;
+  height: 60px;
+  color: #450E0F;
+  background-color: #FFF5D2;
+  border: 2px solid #EEDAAB;
+  border-radius: 10px;
+  margin: 15px 0;
+}
